@@ -8,6 +8,7 @@ import Products from "./pages/Products";
 import Stock from "./pages/Stock";
 import Transactions from "./pages/Transactions";
 import Reports from "./pages/Reports";
+import Settings from "./pages/Settings";
 
 import "./App.css";
 
@@ -32,6 +33,7 @@ function App() {
           {page === "Transactions" && <Transactions />}
 
           {page === "Reports" && <Reports />}
+          {page === "Settings" && <Settings />}
         </main>
       </div>
     </div>

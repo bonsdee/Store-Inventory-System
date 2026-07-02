@@ -1,0 +1,289 @@
+/* ===========================
+   HEADER
+=========================== */
+
+.header {
+  height: 75px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 30px;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.store-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.date {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* ===========================
+   Notification
+=========================== */
+
+.notification-wrapper {
+  position: relative;
+}
+
+.notification-btn {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f3f4f6;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+
+  position: relative;
+
+  flex-shrink: 0;
+}
+
+.notification-btn:hover {
+  background: #2563eb;
+  color: white;
+  transform: scale(1.05);
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+
+    width: 20px;
+    height: 20px;
+
+    background: #ef4444;
+    color: #fff;
+
+    border: 2px solid #fff;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+/* ===========================
+   Notification Dropdown
+=========================== */
+
+.notification-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+
+  width: 330px;
+
+  background: white;
+  border-radius: 14px;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+
+  overflow: hidden;
+
+  animation: dropdown 0.25s ease;
+
+  z-index: 1000;
+}
+
+.notification-dropdown h4 {
+  padding: 16px 20px;
+  color: #2563eb;
+  font-size: 16px;
+  border-bottom: 1px solid #ececec;
+}
+
+.notification-item {
+  padding: 15px 20px;
+
+  font-size: 14px;
+  color: #374151;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-item:hover {
+  background: #f8fafc;
+  padding-left: 24px;
+}
+
+/* ===========================
+   USER MENU
+=========================== */
+
+.user-menu {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===========================
+   User Dropdown
+=========================== */
+
+.dropdown {
+  position: absolute;
+
+  top: 60px;
+  right: 0;
+
+  width: 220px;
+
+  background: white;
+
+  border-radius: 14px;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+
+  overflow: hidden;
+
+  animation: dropdown 0.25s ease;
+
+  z-index: 1000;
+}
+
+.dropdown button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: white;
+  border: none;
+
+  padding: 14px 18px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  font-size: 14px;
+}
+
+.dropdown button:hover {
+  background: #f3f4f6;
+}
+
+.logout-btn {
+  color: #dc2626;
+}
+
+.logout-btn:hover {
+  background: #fee2e2 !important;
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 15px;
+  }
+
+  .store-title {
+    font-size: 22px;
+  }
+
+  .date,
+  .user-name {
+    display: none;
+  }
+
+  .notification-dropdown {
+    width: 290px;
+    right: -20px;
+  }
+}
