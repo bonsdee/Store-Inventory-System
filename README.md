@@ -1,37 +1,20 @@
-# 📦 Inventory Management System with Barcode Scanner
+# 📦 Store Inventory System
 
-A full-stack Inventory Management System built with **React.js**, **Spring Boot**, and **MySQL**. The system allows users to manage products, monitor stock levels, perform stock-in/stock-out transactions, and process sales using barcode scanning through a Point of Sale (POS) interface.
+A full-stack web-based Store Inventory System built with **React**, **Spring Boot**, and **Supabase PostgreSQL**. The system helps businesses efficiently manage products, inventory, sales, and stock movements through an intuitive dashboard.
 
 ---
 
 ## 🚀 Features
 
-### 📊 Dashboard
-- Displays total products
-- Available stock summary
-- Low stock monitoring
-- Out-of-stock monitoring
-- Recent stock transactions
-
-### 📦 Product Management
-- Add new products
-- Edit product information
-- Delete products
-- Search products by barcode
-- Duplicate barcode and product name validation
-
-### 📥 Stock Management
-- Stock In products
-- Stock Out products
-- Automatic inventory updates
-- Transaction history logging
-
-### 🛒 Point of Sale (POS)
-- Barcode scanning
-- Shopping cart
-- Quantity adjustment
-- Remove items from cart
-- Automatic stock deduction after checkout
+- 🔐 User Authentication
+- 📦 Product Management
+- 📊 Dashboard Analytics
+- 🛒 Point of Sale (POS)
+- 📥 Stock In / Stock Out
+- 🔔 Low Stock Notifications
+- 📜 Transaction History
+- 📈 Inventory Monitoring
+- ☁️ Cloud Database (Supabase)
 
 ---
 
@@ -40,87 +23,96 @@ A full-stack Inventory Management System built with **React.js**, **Spring Boot*
 ### Frontend
 - React.js
 - Axios
-- CSS3
+- CSS
+- Lucide React Icons
 
 ### Backend
 - Spring Boot
 - Spring Data JPA
 - Maven
+- REST API
 
 ### Database
-- MySQL
+- PostgreSQL (Supabase)
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```
 store-inventory-system/
 │
 ├── frontend/
-│   ├── components/
-│   ├── pages/
-│   ├── styles/
-│   └── App.jsx
+│   ├── src/
+│   ├── public/
+│   └── package.json
 │
 ├── backend/
-│   ├── controller/
-│   ├── entity/
-│   ├── repository/
-│   ├── service/
-│   └── InventorySystemApplication.java
+│   ├── src/
+│   ├── pom.xml
+│   └── mvnw
 │
 └── README.md
 ```
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Prerequisites
+
+Before running the project, install:
+
+- Java 21+ (or your project's required version)
+- Node.js 18+
+- Maven
+- Git
+- Supabase Account
+
+---
+
+## 📥 Installation
 
 ### 1. Clone the repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/store-inventory-system.git
+
+cd store-inventory-system
 ```
 
-### 2. Backend Setup
+---
+
+### 2. Configure the Backend
+
+Navigate to the backend folder.
 
 ```bash
 cd backend
 ```
 
-Configure your **application.properties**
+Create or update your `application.properties`.
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/inventory_db
-spring.datasource.username=root
-spring.datasource.password=YOUR_PASSWORD
+spring.datasource.url=YOUR_SUPABASE_DATABASE_URL
+spring.datasource.username=YOUR_SUPABASE_USERNAME
+spring.datasource.password=YOUR_SUPABASE_PASSWORD
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 ```
 
-Run the Spring Boot application.
-
----
-
-### 3. Frontend Setup
+Run the backend.
 
 ```bash
-cd frontend
-
-npm install
-
-npm run dev
+./mvnw spring-boot:run
 ```
 
-Frontend runs on
+Windows:
 
-```
-http://localhost:5173
+```bash
+mvnw.cmd spring-boot:run
 ```
 
-Backend runs on
+Backend runs on:
 
 ```
 http://localhost:8080
@@ -128,62 +120,82 @@ http://localhost:8080
 
 ---
 
-## 📷 Screens
+### 3. Configure the Frontend
 
-- Dashboard
-- Products
-- Stock Transactions
-- Point of Sale (POS)
+Navigate to the frontend folder.
 
----
+```bash
+cd frontend
+```
 
-## 🔌 REST API
+Install dependencies.
 
-### Products
+```bash
+npm install
+```
 
-| Method | Endpoint |
-|----------|----------------------------|
-| GET | /api/products |
-| GET | /api/products/barcode/{barcode} |
-| POST | /api/products |
-| PUT | /api/products/{id} |
-| DELETE | /api/products/{id} |
+Start the React application.
 
----
+```bash
+npm run dev
+```
 
-### Stock
+Frontend runs on:
 
-| Method | Endpoint |
-|----------|------------------------------|
-| POST | /api/stock/{id}/in |
-| POST | /api/stock/{id}/out |
-| GET | /api/stock |
-| GET | /api/stock/product/{id} |
+```
+http://localhost:5173
+```
 
 ---
 
-## 📌 Future Improvements
+## ☁️ Database
 
-- User Authentication (Admin/Cashier)
-- Sales Reports
-- Printable Receipts
-- Barcode Generation
-- Product Categories
+This project uses **Supabase PostgreSQL** as its cloud database.
+
+Benefits include:
+
+- Cloud-hosted database
+- Automatic backups
+- Secure PostgreSQL
+- Accessible from anywhere
+
+---
+
+
+## 🔮 Future Improvements
+
+- Barcode Scanner Integration
+- Sales Reports (PDF/Excel)
+- Multi-user Roles
 - Supplier Management
-- Inventory Analytics
-- Sales Dashboard Charts
-- Export Reports (PDF/Excel)
+- Customer Management
+- Email Notifications
+- Audit Logs
+- Mobile Responsive UI
 
 ---
 
-## 👨‍💻 Author
+## 🤝 Contributing
 
-**Jivonz Dy**
+Contributions are welcome.
 
-Bachelor of Science in Information Technology
+1. Fork the repository.
+2. Create a new branch.
+3. Commit your changes.
+4. Push the branch.
+5. Open a Pull Request.
 
 ---
 
 ## 📄 License
 
-This project is for educational purposes.
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Developer
+
+Developed by **Jivonz Dy**
+
+GitHub:
+https://github.com/YOUR_USERNAME
