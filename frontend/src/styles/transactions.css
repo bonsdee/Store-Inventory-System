@@ -1,0 +1,77 @@
+.transactions {
+  animation: fadeIn 0.3s ease;
+}
+
+.transactions h2 {
+  margin-bottom: 25px;
+}
+
+.transaction-table {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 15px;
+
+  border-bottom: 1px solid #eee;
+
+  text-align: left;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Transaction Badge */
+
+.badge {
+  padding: 6px 14px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  display: inline-block;
+}
+
+.badge-in {
+  background: #dcfce7;
+
+  color: #16a34a;
+}
+
+.badge-out {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+.empty-transactions {
+  color: #64748b;
+
+  font-weight: 600;
+
+  text-align: center;
+}

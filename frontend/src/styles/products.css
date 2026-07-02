@@ -1,0 +1,243 @@
+.products {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Title */
+
+.products h2 {
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+/* Product Form Card */
+
+.product-form {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 15px;
+
+  margin-bottom: 30px;
+}
+
+/* Inputs */
+
+.product-form input {
+  height: 42px;
+
+  padding: 0 15px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.product-form input:focus {
+  border-color: #2563eb;
+}
+
+.product-form input:disabled {
+  background: #f1f5f9;
+
+  color: #64748b;
+
+  cursor: not-allowed;
+}
+
+/* Button */
+
+.product-form button {
+  height: 42px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+.product-form button:hover {
+  background: #1d4ed8;
+}
+
+.product-form .cancel-edit {
+  background: #64748b;
+}
+
+.product-form .cancel-edit:hover {
+  background: #475569;
+}
+
+/* Table Section */
+
+.product-table {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Table */
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f8fafc;
+}
+
+th {
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+th,
+td {
+  padding: 15px;
+
+  text-align: left;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* Edit Button */
+
+td button {
+  background: #f97316;
+
+  color: white;
+
+  border: none;
+
+  padding: 8px 18px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+td button:hover {
+  background: #ea580c;
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .product-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .product-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.delete-btn {
+  background: #dc2626;
+
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+.barcode-search {
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+
+  width: fit-content;
+}
+
+.barcode-search input {
+  width: 300px;
+
+  height: 40px;
+
+  padding: 0 15px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 10px;
+}
+
+.barcode-search button {
+  background: #2563eb;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 10px;
+
+  padding: 0 25px;
+
+  cursor: pointer;
+}
+
+.search-result {
+  background: #f8fafc;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  margin-bottom: 25px;
+}

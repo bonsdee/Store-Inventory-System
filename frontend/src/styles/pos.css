@@ -1,0 +1,258 @@
+.pos {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Barcode Scanner */
+
+.scanner {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.scanner input {
+  flex: 1;
+
+  height: 40px;
+
+  padding: 10px;
+
+  border-radius: 10px;
+
+  border: 1px solid #ddd;
+}
+
+.scanner button {
+  background: #2563eb;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 10px;
+
+  width: 90px;
+
+  height: 40px;
+
+  cursor: pointer;
+
+  flex: none;
+}
+
+/* Cart */
+
+.cart {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  height: 600px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.cart table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+
+  flex: 1;
+}
+
+.cart tbody {
+  vertical-align: top;
+}
+
+.cart th,
+.cart td {
+  padding: 18px;
+
+  border-bottom: 1px solid #eee;
+
+  font-size: 15px;
+}
+
+/* Column sizes */
+
+.cart th:nth-child(1),
+.cart td:nth-child(1) {
+  width: 40%;
+
+  text-align: left;
+}
+
+.cart th:nth-child(2),
+.cart td:nth-child(2) {
+  width: 20%;
+
+  text-align: center;
+}
+
+.cart th:nth-child(3),
+.cart td:nth-child(3) {
+  width: 20%;
+
+  text-align: center;
+}
+
+.cart th:nth-child(4),
+.cart td:nth-child(4) {
+  width: 20%;
+
+  text-align: center;
+}
+
+/* Quantity */
+
+.qty-control {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+}
+
+.qty-control span {
+  min-width: 25px;
+
+  text-align: center;
+
+  font-weight: 600;
+}
+
+.qty-btn {
+  width: 35px;
+
+  height: 30px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #e2e8f0;
+
+  cursor: pointer;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 18px;
+
+  line-height: 1;
+
+  padding: 0;
+}
+
+.qty-btn:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.45;
+}
+
+.stock-hint {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+/* Remove */
+
+.remove {
+  width: auto;
+
+  background: #dc2626;
+
+  color: white;
+
+  border: none;
+
+  padding: 7px 14px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+/* Footer */
+
+.cart-footer {
+  margin-top: auto;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #eee;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  min-height: 70px;
+}
+
+.checkout {
+  background: #16a34a;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 18px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  width: 120px;
+
+  height: 42px;
+
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}

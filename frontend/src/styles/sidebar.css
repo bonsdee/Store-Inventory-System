@@ -1,0 +1,113 @@
+/* ================= Sidebar ================= */
+
+.sidebar {
+  position: fixed;
+  top: 85px;
+  left: 0;
+
+  width: 250px;
+  height: calc(100vh - 85px);
+
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+}
+
+/* ================= Header ================= */
+
+.sidebar-header {
+  padding: 24px 24px 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.sidebar-header h3 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #94a3b8;
+}
+
+/* ================= Menu ================= */
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 8px;
+}
+
+/* ================= Buttons ================= */
+
+.sidebar-menu button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 14px 16px;
+
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+
+  color: #475569;
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Icons */
+
+.sidebar-menu button svg {
+  flex-shrink: 0;
+}
+
+/* Text */
+
+.sidebar-menu button span {
+  white-space: nowrap;
+}
+
+/* Hover */
+
+.sidebar-menu button:hover {
+  background: #eef2ff;
+  color: #4f46e5;
+  transform: translateX(4px);
+}
+
+/* Active */
+
+.sidebar-menu button.active {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  box-shadow: 0 8px 18px rgba(79, 70, 229, .25);
+}
+
+/* Active icon */
+
+.sidebar-menu button.active svg {
+  color: white;
+}
+
+/* Scrollbar */
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
